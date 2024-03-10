@@ -12,6 +12,8 @@ numpy = "^1.26.4"
 opencv-python = "^4.9.0.80"
 opencv-contrib-python = "^4.9.0.80"
 
+[tool.poetry.scripts]
+test_demo = 'test_project.demo:main'
 
 [build-system]
 requires = ["poetry-core"]
