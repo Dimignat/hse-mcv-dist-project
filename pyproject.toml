@@ -11,6 +11,12 @@ tensorflow = "^2.15.0"
 numpy = "^1.26.4"
 opencv-python = "^4.9.0.80"
 opencv-contrib-python = "^4.9.0.80"
+pylint = {version="*", extras=["dev"], optional=true}
+black = {version="*", extras=["dev"], optional=true}
+pre-commit = {version="*", extras=["dev"], optional=true}
+
+[tool.poetry.extras]
+dev = ["pylint", "black", "pre-commit"]
 
 [tool.poetry.scripts]
 test_demo = 'test_project.demo:main'

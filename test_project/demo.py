@@ -1,10 +1,14 @@
-import cv2
+"""
+Main script. Runs image processing
+"""
 import os
+
+import cv2
 import numpy as np
 
 try:
     from tflite_runtime.interpreter import Interpreter
-except:
+except ImportError:
     from tensorflow.lite.python.interpreter import Interpreter
 
 
@@ -14,6 +18,10 @@ MODEL_PATH = os.path.join(THIS_DIR, "model_float16_quant.tflite")
 
 
 def main():
+    """
+    Run predefined image processing.
+    :return: None.
+    """
     img = cv2.imread(IMG_PATH)
     cv2.imshow("source", img)
     cv2.waitKey(0)
@@ -23,15 +31,15 @@ def main():
 
     img = cv2.resize(img, (128, 128))
     img = np.asarray(img)
-    img = img / 255.
+    img = img / 255.0
     img = img.astype(np.float32)
-    img = img[np.newaxis,:,:,:]
+    img = img[np.newaxis, :, :, :]
 
     # Tensorflow Lite
     interpreter = Interpreter(model_path=MODEL_PATH, num_threads=4)
     interpreter.allocate_tensors()
-    input_details = interpreter.get_input_details()[0]['index']
-    output_details = interpreter.get_output_details()[0]['index']
+    input_details = interpreter.get_input_details()[0]["index"]
+    output_details = interpreter.get_output_details()[0]["index"]
 
     interpreter.set_tensor(input_details, img)
     interpreter.invoke()
@@ -58,5 +66,5 @@ def main():
     cv2.destroyAllWindows()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
