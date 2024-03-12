@@ -18,3 +18,6 @@ Run `python3 -m build` in the source directory.
       - `pip install -e 'git+https://github.com/Dimignat/hse-mcv-dist-project#egg=test-project[dev]'`
 
 4. Run `python3 -m test_project` or simply `test_demo`. This might take a while.
+
+# Style policies
+`PyLint` and `black` must be executed before each commit. This can be done automatically using `pre-commit`.
