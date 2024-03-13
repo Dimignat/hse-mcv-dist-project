@@ -21,3 +21,6 @@ Run `python3 -m build` in the source directory.
 
 # Style policies
 `PyLint` and `black` must be executed before each commit. This can be done automatically using `pre-commit`.
+
+# Development policies
+In addition to checking compliance with style policies, one must run tests using `pytest`.

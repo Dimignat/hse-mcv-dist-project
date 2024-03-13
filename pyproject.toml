@@ -13,10 +13,11 @@ opencv-python = "^4.9.0.80"
 opencv-contrib-python = "^4.9.0.80"
 pylint = {version="*", extras=["dev"], optional=true}
 black = {version="*", extras=["dev"], optional=true}
+pytest = {version="*", extras=["dev"], optional=true}
 pre-commit = {version="*", extras=["dev"], optional=true}
 
 [tool.poetry.extras]
-dev = ["pylint", "black", "pre-commit"]
+dev = ["pylint", "black", "pytest", "pre-commit"]
 
 [tool.poetry.scripts]
 test_demo = 'test_project.demo:main'
