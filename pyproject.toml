@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
 tensorflow = "2.11.0"
+tensorflow-io-gcs-filesystem = "0.30.0"
 numpy = "^1.26.4"
 opencv-python = "^4.9.0.80"
 opencv-contrib-python = "^4.9.0.80"
