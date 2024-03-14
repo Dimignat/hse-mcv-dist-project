@@ -16,3 +16,9 @@ repos:
           entry: ./venv/bin/pylint
           language: system
           types: [ python ]
+- repo: https://github.com/python-poetry/poetry
+  rev: 1.8.2
+  hooks:
+  - id: poetry-lock
+    args:
+    - --no-update

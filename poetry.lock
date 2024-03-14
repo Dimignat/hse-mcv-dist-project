@@ -781,10 +781,10 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.21.0", markers = "python_version == \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
-    {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\""},
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\""},
     {version = ">=1.19.3", markers = "platform_system == \"Linux\" and platform_machine == \"aarch64\" and python_version >= \"3.8\" and python_version < \"3.10\" or python_version > \"3.9\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_system != \"Darwin\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_machine != \"arm64\" and python_version < \"3.10\""},
+    {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\""},
+    {version = ">=1.21.0", markers = "python_version == \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
 ]
 
 [[package]]
@@ -805,10 +805,10 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.21.0", markers = "python_version == \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
-    {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\""},
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\""},
     {version = ">=1.19.3", markers = "platform_system == \"Linux\" and platform_machine == \"aarch64\" and python_version >= \"3.8\" and python_version < \"3.10\" or python_version > \"3.9\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_system != \"Darwin\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_machine != \"arm64\" and python_version < \"3.10\""},
+    {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\""},
+    {version = ">=1.21.0", markers = "python_version == \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\""},
 ]
 
 [[package]]
@@ -1252,6 +1252,42 @@ files = [
 ]
 
 [[package]]
+name = "tensorflow-intel"
+version = "2.11.0"
+description = "TensorFlow is an open source machine learning framework for everyone."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tensorflow_intel-2.11.0-cp310-cp310-win_amd64.whl", hash = "sha256:d78927838b5482ffe2b6e340675fa74586ce832d32b689a15b52ccba949dc148"},
+    {file = "tensorflow_intel-2.11.0-cp37-cp37m-win_amd64.whl", hash = "sha256:9f783b63889a8cb294a3bd293b326b575146582afeba0580e1e9bead77f49bd1"},
+    {file = "tensorflow_intel-2.11.0-cp38-cp38-win_amd64.whl", hash = "sha256:12046e5cd459416bdeaefce643cb53cdd1971610bb8d14326fbc500442f5d595"},
+    {file = "tensorflow_intel-2.11.0-cp39-cp39-win_amd64.whl", hash = "sha256:d8cf977b2b0bcf0c54c0f8996c9074178107ae7aa6a67484e890bbba821b98e0"},
+]
+
+[package.dependencies]
+absl-py = ">=1.0.0"
+astunparse = ">=1.6.0"
+flatbuffers = ">=2.0"
+gast = ">=0.2.1,<=0.4.0"
+google-pasta = ">=0.1.1"
+grpcio = ">=1.24.3,<2.0"
+h5py = ">=2.9.0"
+keras = ">=2.11.0,<2.12"
+libclang = ">=13.0.0"
+numpy = ">=1.20"
+opt-einsum = ">=2.3.2"
+packaging = "*"
+protobuf = ">=3.9.2,<3.20"
+setuptools = "*"
+six = ">=1.12.0"
+tensorboard = ">=2.11,<2.12"
+tensorflow-estimator = ">=2.11.0,<2.12"
+tensorflow-io-gcs-filesystem = {version = ">=0.23.1", markers = "platform_machine != \"arm64\" or platform_system != \"Darwin\""}
+termcolor = ">=1.1.0"
+typing-extensions = ">=3.6.6"
+wrapt = ">=1.11.0"
+
+[[package]]
 name = "tensorflow-io-gcs-filesystem"
 version = "0.30.0"
 description = "TensorFlow IO"
@@ -1500,5 +1536,5 @@ dev = ["black", "pre-commit", "pylint", "pytest"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = ">=3.9,<3.11"
-content-hash = "c9b984909de7e47b0c8f3531d3ad6d6e24db61d2300303d4f87f8c65018c81ac"
+python-versions = "^3.9,<3.11"
+content-hash = "86099bb7b8fdb88ae7758ea377d3cc454e4601eab7d730b9c34f2ec3ffac207c"
