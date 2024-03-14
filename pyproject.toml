@@ -6,11 +6,11 @@ authors = ["Dmitry Ignatev"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.11"
-tensorflow = "2.15.0"
-numpy = "1.26.4"
-opencv-python = "4.9.0.80"
-opencv-contrib-python = "4.9.0.80"
+python = "^3.9"
+tensorflow = "^2.15.0"
+numpy = "^1.26.4"
+opencv-python = "^4.9.0.80"
+opencv-contrib-python = "^4.9.0.80"
 pylint = {version="*", extras=["dev"], optional=true}
 black = {version="*", extras=["dev"], optional=true}
 pytest = {version="*", extras=["dev"], optional=true}

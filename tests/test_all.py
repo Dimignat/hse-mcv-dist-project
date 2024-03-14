@@ -3,6 +3,7 @@ Tests for test_project.
 """
 
 import os
+import platform
 from pathlib import Path
 from typing import Optional
 
@@ -14,7 +15,10 @@ from test_project.demo import main
 
 
 THIS_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
-EXPECTED_OUTPUTS_DIR = THIS_DIR / "expected_outputs"
+if platform.processor() == "arm":
+    EXPECTED_OUTPUTS_DIR = THIS_DIR / "expected_outputs_arm"
+else:
+    EXPECTED_OUTPUTS_DIR = THIS_DIR / "expected_outputs_86"
 
 
 def _save_test_regression():
